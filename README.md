@@ -37,7 +37,8 @@ npm install
 ### 3. 개발 모드 실행 (Development)
 웹 브라우저 및 개발 서버 환경으로 실행:
 ```bash
-npm run dev
+# npm run dev
+npm install --save-dev electron electron-builder
 ```
 
 Electron 데스크톱 앱 개발 모드로 실행:
