@@ -329,7 +329,7 @@ export default function ProductMappingList({ mappings, onChange }: ProductMappin
             품목 대치 사전 관리
           </h2>
           <p className="text-sm text-slate-500 mt-1">
-            (품목리스트_추가.txt 연동) 복잡한 원본 상품명을 정제하고, 요약 보고서에 표시할 심플한 표준 상품명으로 매핑합니다.
+            복잡한 원본 상품명을 정제하고, 요약 보고서에 표시할 심플한 표준 상품명으로 매핑합니다.
           </p>
         </div>
 
