@@ -11,8 +11,6 @@
       "dist/**/*",
       "electron.cjs",
       "package.json",
-      "품목리스트.txt",
-      "품목리스트_추가.txt"
     ],
     "win": {
       "target": [
