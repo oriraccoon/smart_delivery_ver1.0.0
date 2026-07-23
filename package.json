@@ -1,0 +1,64 @@
+{
+  "name": "smart-delivery",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "electron.cjs",
+  "build": {
+    "appId": "com.smartdelivery.app",
+    "productName": "스마트운송장프로그램",
+    "files": [
+      "dist/**/*",
+      "electron.cjs",
+      "package.json",
+      "품목리스트.txt",
+      "품목리스트_추가.txt"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "verifyUpdateCodeSignature": false
+    },
+    "forceCodeSigning": false,
+    "directories": {
+      "output": "dist-electron"
+    }
+  },
+  "dependencies": {
+    "@google/genai": "^2.4.0",
+    "@tailwindcss/vite": "^4.1.14",
+    "@vitejs/plugin-react": "^5.0.4",
+    "dotenv": "^17.2.3",
+    "exceljs": "^4.4.0",
+    "express": "^4.21.2",
+    "file-saver": "^2.0.5",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "vite": "^6.2.3",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz",
+    "xlsx-populate": "^1.21.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/file-saver": "^2.0.7",
+    "@types/node": "^22.14.0",
+    "autoprefixer": "^10.4.21",
+    "electron": "^34.5.8",
+    "electron-builder": "^25.1.8",
+    "esbuild": "^0.25.0",
+    "tailwindcss": "^4.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2"
+  },
+  "scripts": {
+    "dev": "tsx server.ts",
+    "build": "vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
+    "start": "node dist/server.cjs",
+    "lint": "tsc --noEmit",
+    "dist": "npm run build && npx electron-builder"
+  }
+}

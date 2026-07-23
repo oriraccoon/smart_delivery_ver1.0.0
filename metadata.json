@@ -1,0 +1,6 @@
+{
+  "name": "스마트 운송장 프로그램",
+  "description": "네이버, 쿠팡 등 다양한 플랫폼의 주문 데이터를 통합 가공하고 운송장을 자동으로 매칭 및 기입하는 스마트 물류 시스템",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
